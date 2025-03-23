@@ -35,3 +35,16 @@ function ordenarDecrescente(array) {
 }
 
 // -----------------------------------------------------------
+
+function ordenarCrescenteTexto(array) {
+    array.sort();
+    alert(array);
+}
+
+function ordenarDecrescenteTexto(array) {
+    array.sort().reverse();
+    alert(array);
+}
+
+// -----------------------------------------------------------
+
