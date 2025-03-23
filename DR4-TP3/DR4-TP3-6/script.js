@@ -1,8 +1,5 @@
-const lista = document.getElementById("lista");
-const item = document.getElementById("item").value;
+const caixa = document.getElementById("caixa");
 const botao = document.getElementById("botao");
-const itens = [];
+const lista = [];
 
-function adicionarItem(lista, item, botao){
-
-}
+adicionarItemNaLista(botao, caixa, lista)
