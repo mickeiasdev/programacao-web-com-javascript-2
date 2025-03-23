@@ -1,11 +1,12 @@
 // ------------------------------------------------------------
 
 function tamanhoMaximo(item, num) { 
-    return item.length < num ? true : false
+    return item.length < num ? item : alert(`o item ${item} tem mais de ${num} caracteres`);
+
 }
 
 function tamanhoMinimo(item, num) {
-    return item.length > num ? true : false
+    return item.length < num ? alert(`o item ${item} tem menos de ${num} caracteres`) : item;
 }
 
 // -----------------------------------------------------------
@@ -49,7 +50,9 @@ function ordenarDecrescenteTexto(array) {
 // -----------------------------------------------------------
 
 function corrigirNome(nome) {
-    const nomes = nome.split(" ");
+    // Isso faz com que qualquer quantidade de espaços seguidos seja considerada como um único separador.
+    const nomes = nome.trim().split(/\s+/).map(item => item.trim());
+
     let nomesCorrigidos = nomes.map((item, i) => {
         if(["da", "de", "do"].includes(item.toLowerCase()) && i !== 0) {
             return item.toLowerCase();
@@ -57,5 +60,6 @@ function corrigirNome(nome) {
             return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
         }
     })
+
     alert(nomesCorrigidos.join(" "));
 }
