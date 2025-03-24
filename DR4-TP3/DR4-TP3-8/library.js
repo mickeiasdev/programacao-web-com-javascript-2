@@ -66,7 +66,7 @@ function corrigirNome(nome) {
 
 // -----------------------------------------------------------
 
-function adicionarItemNaLista(botao, caixa, lista) {
+function adicionarItemNaLista(botao, lista, arrayItens) {
     botao.addEventListener("click", () => {
         const item = document.getElementById("item").value.trim();
         
@@ -75,17 +75,31 @@ function adicionarItemNaLista(botao, caixa, lista) {
             return
         }
 
-        lista.push(item)
-        exibirLista(caixa, item);
+        arrayItens.push(item)
+        exibirLista(lista, arrayItens);
         
         document.getElementById("item").value = "";
-        console.log(lista)
+        console.log(arrayItens)
     })
 }
 
-function exibirLista(lista, item) {
+function exibirLista(lista, arrayItens) {
     lista.classList.remove("hide")
-    lista.innerHTML += `<p>${item}</p>` 
+    lista.innerHTML = ""
+
+    arrayItens.forEach((item, index) => {
+        lista.innerHTML += `
+            <li class="itemLista">
+                <p>${item}</p>
+                <button class="excluir" onclick="excluirItemDaLista(${index})">Excluir</button>
+            </li>
+        `
+    })
+}
+
+function excluirItemDaLista(index) {
+        arrayItens.splice(index, 1)
+        exibirLista(document.getElementById("lista"), arrayItens)
 }
 
 // -----------------------------------------------------------
