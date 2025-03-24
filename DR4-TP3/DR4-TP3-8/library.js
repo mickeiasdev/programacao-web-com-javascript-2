@@ -9,9 +9,7 @@ function tamanhoMinimo(item, num) {
     return item.length < num ? alert(`o item ${item} tem menos de ${num} caracteres`) : item;
 }
 
-// -----------------------------------------------------------
-
-function validarCancelar(item) {
+function validarEntrada(item) {
     if(item === null) {
         alert("Acao cancelada.");
         return;
@@ -21,6 +19,16 @@ function validarCancelar(item) {
         return;
     }
     return item
+}
+
+function validarNumeroInteiro(num) {
+    if(validarEntrada(num)) {
+        if(!Number.isInteger(num)) {
+            alert("O programa espera um numero inteiro.")
+            return
+        } 
+        return num 
+    }
 }
 
 // -----------------------------------------------------------
