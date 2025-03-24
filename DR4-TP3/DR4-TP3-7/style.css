@@ -1,0 +1,15 @@
+body {
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.itemLista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
