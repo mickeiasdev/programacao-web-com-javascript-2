@@ -10,24 +10,24 @@ function tamanhoMinimo(item, num) {
 }
 
 function validarEntrada(item) {
-    if(item === null) {
-        alert("Acao cancelada.");
-        return;
-    }
     if(item.trim() === "") {
         alert("Voce inseriu um valor vazio. Acao cancelada.");
+     return;
+    }
+    if(item === null) {
+        alert("Acao cancelada.");
         return;
     }
     return item
 }
 
 function validarNumeroInteiro(num) {
-    if(validarEntrada(num)) {
-        if(!Number.isInteger(num)) {
-            alert("O programa espera um numero inteiro.")
-            return
-        } 
-        return num 
+    validarEntrada(num)
+    if(Number.isInteger(num)) {
+        return num
+    } else {
+        alert("O programa espera um numero inteiro valido.")
+        return 
     }
 }
 
