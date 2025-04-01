@@ -11,6 +11,4 @@
 
 // Serão usados como teste os números 4181 e 6765.
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const numero = prompt("Digite um numero:")
-// });
+const numero = prompt("Digite um numero:")
