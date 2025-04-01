@@ -21,16 +21,22 @@
       }
       #filtro {
         display: flex;
+        flex-wrap: wrap;
         gap: 25px;
         padding-bottom: 20px;
       }
-      #som, #sub, #mult, #div {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        border: 1px solid rgb(196, 196, 196);
+
+      .box {
         width: 200px;
-        padding-left: 20px;
+        border: 1px solid red;
+        border-radius: 10px;
+      }
+      h4 {
+        text-align: center;
+      }
+      li {
+        list-style: none;
+        margin-bottom: 10px;
       }
     </style>
     <script src="/DR4-AT/biblioteca/biblioteca.js" defer></script>
@@ -50,18 +56,6 @@
     <hr />
     <h3>Resposta:</h3>
     <div id="filtro">
-        <div id="som">
-            <h3>Soma</h3>
-        </div>
-        <div id="sub">
-            <h3>Subtração</h3>
-        </div>
-        <div id="mult">
-            <h3>Multiplicação</h3>
-        </div>
-        <div id="div">
-            <h3>Divisão</h3>
-        </div>
     </div>
     <hr />
     <a href="/DR4-AT/index.html">Voltar a pagina inicial</a>

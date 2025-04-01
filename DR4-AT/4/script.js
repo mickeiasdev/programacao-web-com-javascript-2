@@ -36,7 +36,7 @@ array.forEach((item, index) => {
 array.forEach(item => {
     const li = document.createElement("li");
     try {
-        verificarFormatoArray(item); // Verifica o item individualmente
+        verificarFormatoArray(item);
         li.innerHTML = `Autor: ${item.autor}</br>Título: ${item.titulo}</br>ISBN: ${item.isbn}</br></br>`;
     } catch (erro) {
         li.innerHTML = `Error: ${erro.message}`;
