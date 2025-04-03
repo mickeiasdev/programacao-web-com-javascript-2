@@ -9,8 +9,8 @@
 // Teste o seu programa com cenários diferentes.
 
 function verificarPalavrasPalindromo(palavra) {
-    const um = [...palavra.toLowerCase().replace(/\s/g, "")];
-    const dois = [...palavra.toLowerCase().replace(/\s/g, "")].reverse();
+    const um = removerAcentos(palavra.toLowerCase().replace(/\s/g, ""));
+    const dois = [...um.toLowerCase()].reverse().join("")
     console.log(um)
     console.log(dois)
     return um.join("") === dois.join("");
