@@ -10,7 +10,7 @@
 
 const exibir = document.getElementById("exibir")
 
-function verificarPalavras(um, dois) {
+function verificarPalavrasAnagrama(um, dois) {
   um = [...um.toLowerCase().replace(/\s/g, "")].sort();
   dois = [...dois.toLowerCase().replace(/\s/g, "")].sort();
   return um.join("") === dois.join("");
@@ -32,7 +32,7 @@ try {
   let dois = prompt("Digite a segunda palavra:");
   validarEntradasComThrowErro(dois);
 
-  if (verificarPalavras(um, dois)) {
+  if (verificarPalavrasAnagrama(um, dois)) {
     exibir.innerHTML = `As palavras "<span>${um}</span>" e "<span>${dois}</span>" sao Anagramas!`
     alert(`As palavras "${um}" e "${dois}" sao Anagramas!`);
   } else {
