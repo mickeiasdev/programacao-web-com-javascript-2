@@ -68,3 +68,11 @@ function verificarFormatoArray(item) {
   }
 }
 
+function validarStringApenasNumero(string) {
+  const regex = /\d/;
+  if(!regex.test(string)){
+      alert("Entrada invalida! O programa espera uma string apenas de numeros.")
+      return false
+  }
+  return true
+}
