@@ -9,3 +9,44 @@
 // Use prompt e alert.
 // Coloque pelo menos 5 questões.
 // Teste o seu programa com cenários diferentes.
+
+const exibir = document.getElementById("exibir")
+
+const perguntas = [
+    "O atendimento foi rápido e eficiente?",
+    "O problema foi resolvido de forma satisfatória?",
+    "O atendente foi educado e prestativo?",
+    "Foi fácil entrar em contato com o suporte?",
+    "Estou satisfeito com o atendimento recebido?"
+];
+
+function converterNota(num) {
+    if(num === 1) return 10
+    if(num === 2) return 5
+    if(num === 3) return 0
+    return
+}
+
+function fazerPerguntas() {
+  let notaAcumulada = 0;
+  const notaTotal = perguntas.length * 10;
+
+  for (let i = 0; i < perguntas.length; i++) {
+    let resposta = prompt(`${perguntas[i]}\n\n1. Concordo\n2. Concordo Parcialmente\n3. Discordo`);
+    
+    if (!validarCancelar(resposta)) return; // Sai da função sem erro se o usuário cancelar
+
+    while (!validarNumeroInteiroPositivo(resposta) || !limitarNumeroDaEntrada(resposta)) {
+      resposta = prompt(`${perguntas[i]}\n\n1. Concordo\n2. Concordo Parcialmente\n3. Discordo`);
+      if (!validarCancelar(resposta)) return; // Verifica cancelamento novamente
+    }
+
+    notaAcumulada += converterNota(Number(resposta));
+  }
+
+  const percentual = (notaAcumulada / notaTotal) * 100;
+  alert(`Percentual de satisfação: ${percentual.toFixed(2)}%`);
+  exibir.innerHTML = `Percentual de satisfação: ${percentual.toFixed(2)}%`;
+}
+
+fazerPerguntas(perguntas)
