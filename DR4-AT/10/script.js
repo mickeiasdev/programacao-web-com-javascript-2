@@ -28,7 +28,7 @@ function contarVogais() {
     });
 
     exibir.innerHTML = `<p>A string "${pergunta}" contem ${qntVogais} vogais.</p>`
-    alert(qntVogais)
+    alert(`A string "${pergunta}" contem ${qntVogais} vogais.`)
 }
 
 contarVogais()
