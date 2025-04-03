@@ -77,6 +77,15 @@ function validarStringApenasNumero(entrada) {
   return true
 }
 
+function validarStringApenasLetras(entrada) {
+  const regex = /\d/;
+  if(regex.test(entrada)){
+      alert("Entrada invalida! O programa espera uma string apenas de letras.")
+      return false
+  }
+  return true
+}
+
 function removerAcentos(entrada) {
   return entrada.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
