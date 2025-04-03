@@ -13,7 +13,7 @@ function verificarPalavrasPalindromo(palavra) {
     const dois = [...um.toLowerCase()].reverse().join("")
     console.log(um)
     console.log(dois)
-    return um.join("") === dois.join("");
+    return um === dois
   }
 
   verificarPalavrasPalindromo("Socorram-me, subi no ônibus em Marrocos")
