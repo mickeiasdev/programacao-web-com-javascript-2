@@ -68,11 +68,15 @@ function verificarFormatoArray(item) {
   }
 }
 
-function validarStringApenasNumero(string) {
+function validarStringApenasNumero(entrada) {
   const regex = /\d/;
-  if(!regex.test(string)){
+  if(!regex.test(entrada)){
       alert("Entrada invalida! O programa espera uma string apenas de numeros.")
       return false
   }
   return true
+}
+
+function removerAcentos(entrada) {
+  return entrada.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
