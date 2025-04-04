@@ -89,3 +89,17 @@ function validarStringApenasLetras(entrada) {
 function removerAcentos(entrada) {
   return entrada.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
+
+function limparString(entrada) {
+  return removerAcentos(entrada.toLowerCase().replace(/[^a-z]/g, "").replace(/\s/g, ""));
+}
+
+
+function validarEntradasComThrowErro(entrada) {
+  if (entrada === null)
+    throw new Error("Voce clicou em cancelar.");
+  if (!validarVazio(entrada))
+    throw new TypeError("Voce inseriu um valor vazio.");
+  if (!validarStringApenasLetras(entrada))
+    throw SyntaxError("Voce deve digitar apenas numeros.");
+}

@@ -24,7 +24,7 @@ function fibonacci(valor, arr) {
   for (let i = 2; arr[i - 1] + arr[i - 2] <= valor; i++) {
     arr.push(arr[i - 1] + arr[i - 2]);
   }
-  arr.forEach((item, index) => {
+  arr.forEach((item) => {
     const p = document.createElement("p");
     p.classList.add("numero");
     p.innerHTML = `${item}`;

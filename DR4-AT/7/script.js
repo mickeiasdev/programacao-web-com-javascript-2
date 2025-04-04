@@ -52,7 +52,7 @@ function fazerPerguntas() {
 
     const percentual = (notaAcumulada / notaTotal) * 100;
     alert(`Percentual de satisfação: ${percentual.toFixed(2)}%`);
-    exibir.innerHTML = `Percentual de satisfação: ${percentual.toFixed(2)}%`;
+    exibir.innerHTML = `Percentual de satisfação: <span>${percentual.toFixed(2)}%</span>`;
   }
 }
 

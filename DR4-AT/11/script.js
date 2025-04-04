@@ -16,15 +16,6 @@ function verificarPalavrasAnagrama(um, dois) {
   return um.join("") === dois.join("");
 }
 
-function validarEntradasComThrowErro(entrada) {
-  if (entrada === null)
-    throw new Error("Voce clicou em cancelar! Encerrando...");
-  if (entrada.trim() === "")
-    throw new Error("Voce inseriu um valor vazio! Encerrando...");
-  if (!validarStringApenasLetras(entrada))
-    throw Error("Voce deve digitar apenas numeros! Encerrando...");
-}
-
 try {
   let um = prompt("Digite a primeira palavra:");
   validarEntradasComThrowErro(um);
@@ -33,11 +24,11 @@ try {
   validarEntradasComThrowErro(dois);
 
   if (verificarPalavrasAnagrama(um, dois)) {
-    exibir.innerHTML = `As palavras "<span>${um}</span>" e "<span>${dois}</span>" sao Anagramas!`
-    alert(`As palavras "${um}" e "${dois}" sao Anagramas!`);
+    exibir.innerHTML = `As palavras: "<span>${um}</span>" e "<span>${dois}</span>" sao Anagramas!`
+    alert(`As palavras: "${um}" e "${dois}" sao Anagramas!`);
   } else {
-    exibir.innerHTML = `As palavras "<span>${um}</span>" e "<span>${dois}</span>" nao sao Anagramas!`
-    alert(`As palavras "${um}" e "${dois}" nao sao Anagramas!`);
+    exibir.innerHTML = `As palavras: "<span>${um}</span>" e "<span>${dois}</span>" nao sao Anagramas!`
+    alert(`As palavras: "${um}" e "${dois}" nao sao Anagramas!`);
   }
 } catch (erro) {
   exibir.innerHTML = `<p>Erro: <span>${erro.message}</span></p>`
