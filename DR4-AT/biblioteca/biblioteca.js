@@ -69,7 +69,7 @@ function verificarFormatoArray(item) {
 }
 
 function validarStringApenasNumero(entrada) {
-  const regex = /\d/;
+  const regex = /\d+/;
   if(!regex.test(entrada)){
       alert("Entrada invalida! O programa espera uma string apenas de numeros.")
       return false
@@ -78,7 +78,7 @@ function validarStringApenasNumero(entrada) {
 }
 
 function validarStringApenasLetras(entrada) {
-  const regex = /\d/;
+  const regex = /\d+/;
   if(regex.test(entrada)){
       alert("Entrada invalida! O programa espera uma string apenas de letras.")
       return false

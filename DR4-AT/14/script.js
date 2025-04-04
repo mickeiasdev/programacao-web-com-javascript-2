@@ -10,6 +10,11 @@
 
 const exibir = document.getElementById("exibir");
 
+// NOTA:
+// Segui o exeplo da abreviacao do enunciado
+// Primeiro nome e último nome escritos por extenso,
+// enquanto os nomes do meio estao abreviados com a primeira letra seguida de um ponto
+
 function abreviarNome() {
   const entrada = prompt("Digite um nome completo:");
   const preposicoes = ["de", "da", "do", "dos", "das"];
