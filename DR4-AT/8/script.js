@@ -30,7 +30,7 @@ function calcularPercentualPartidos(partidos, totalDeVotos, i){
 function verificarSegundoTurno(partidos){
     const array = []
     for (let i = 0; i < partidos.length; i++) {
-        if(partidos[i].percentual >= 50){
+        if(partidos[i].percentual > 50){
             return
         } else {
             array.push(partidos[i])

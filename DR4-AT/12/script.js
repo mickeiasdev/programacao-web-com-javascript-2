@@ -32,11 +32,11 @@ function entradaPalavras() {
   }
   const resultado = verificarPalavrasPalindromo(palavra);
   if (resultado) {
-    exibir.innerHTML = `<p>A palavra: <span>"${limparString(palavra)}"</span> é um palíndromo!</p>`;
-    alert(`A palavra: "${limparString(palavra)}" é um palíndromo!`);
+    exibir.innerHTML = `<p><span>"${limparString(palavra)}"</span> é um palíndromo!</p>`;
+    alert(`"${limparString(palavra)}" é um palíndromo!`);
   } else {
-    exibir.innerHTML = `<p>A palavra: <span>"${limparString(palavra)}"</span> não é um palíndromo!</p>`;
-    alert(`A palavra: "${limparString(palavra)}" não é um palíndromo!`);
+    exibir.innerHTML = `<p><span>"${limparString(palavra)}"</span> não é um palíndromo!</p>`;
+    alert(`"${limparString(palavra)}" não é um palíndromo!`);
   }
 }
 
