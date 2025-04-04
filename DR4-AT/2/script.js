@@ -20,7 +20,7 @@ const filtro = document.getElementById("filtro")
 
 array.forEach(item => {
     const li = document.createElement("li")
-    li.innerHTML = item
+    li.innerHTML = `<span>${item}</span>`
     original.appendChild(li)
 });
 
@@ -28,6 +28,6 @@ const arrayFiltrado = new Set(array)
 
 arrayFiltrado.forEach(item => {
     const li = document.createElement("li")
-    li.innerHTML = item
+    li.innerHTML = `<span>${item}</span>`
     filtro.appendChild(li)
 });

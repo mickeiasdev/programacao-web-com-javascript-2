@@ -28,5 +28,5 @@ function entrada(pergunta) {
 if (entrada(pergunta)) {
     exibir.innerHTML = `<p>A string é válida: <span>${pergunta}</span></p>`;
 } else {
-    exibir.innerHTML = `<p>Entrada inválida</p>`;
+    exibir.innerHTML = `<p>Entrada <span>inválida</span></p>`;
 }

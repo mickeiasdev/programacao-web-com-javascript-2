@@ -25,11 +25,11 @@ const array = [
 
 array.forEach((item, index) => {
     const li = document.createElement("li")
-    li.innerHTML = `Autor: ${item.autor}</br>Titulo: ${item.titulo}</br>ISBN: ${item.isbn}</br></br>`
+    li.innerHTML = `Autor: <span>${item.autor}</span></br>Titulo: <span>${item.titulo}</span></br>ISBN: <span>${item.isbn}</span></br></br>`
     original.appendChild(li)
     // esse if é apenas pra exibir normalmente o ultimo item (que é o erro), para nao ficar como undefined...
     if(index === array.length - 1) {
-        li.innerHTML = `Autor: ${item.nomeAutor}</br>Titulo: ${item.nomeTitulo}</br>ISBN: ${item.anoIsbn}</br></br>` 
+        li.innerHTML = `Autor: <span>${item.nomeAutor}</span></br>Titulo: <span>${item.nomeTitulo}</span></br>ISBN: <span>${item.anoIsbn}</span></br></br>` 
     }
 });
 
@@ -37,9 +37,9 @@ array.forEach(item => {
     const li = document.createElement("li");
     try {
         verificarFormatoArray(item);
-        li.innerHTML = `Autor: ${item.autor}</br>Título: ${item.titulo}</br>ISBN: ${item.isbn}</br></br>`;
+        li.innerHTML = `Autor: <span>${item.autor}</span></br>Título: <span>${item.titulo}</span></br>ISBN: <span>${item.isbn}</span></br></br>`;
     } catch (erro) {
-        li.innerHTML = `Error: ${erro.message}`;
+        li.innerHTML = `Error: <span>${erro.message}</span>`;
     }
     filtro.appendChild(li);
 });

@@ -22,14 +22,14 @@ const filtro = document.getElementById("filtro")
 
 anos.forEach(item => {
         const li = document.createElement("li")
-        li.innerHTML = item;
+        li.innerHTML = `<span>${item}</span>`;
         original.appendChild(li)
 });
 
 anos.forEach(item => {
     if(validarAnoBissexto(item)){
         const li = document.createElement("li")
-        li.innerHTML = item;
+        li.innerHTML = `<span>${item}</span>`;
         filtro.appendChild(li)
     }
 });

@@ -9,7 +9,7 @@ const exibir = document.getElementById("exibir");
 
 const entrada = prompt("Digite uma string:");
 if (validarVazio(entrada)) {
-  exibir.innerHTML = "A string não está vazia.";
+  exibir.innerHTML = "A string <span>não está</span> vazia.";
 } else {
-  exibir.innerHTML = "A string está vazia.";
+  exibir.innerHTML = "A string <span>está</span> vazia.";
 }
