@@ -45,15 +45,19 @@ function fazerPerguntas() {
       resposta = prompt(
         `${perguntas[i]}\n\n1. Concordo\n2. Concordo Parcialmente\n3. Discordo`
       );
+
       if (!validarCancelar(resposta)) return;
-
-      notaAcumulada += converterNota(Number(resposta));
     }
-
-    const percentual = (notaAcumulada / notaTotal) * 100;
-    alert(`Percentual de satisfação: ${percentual.toFixed(2)}%`);
-    exibir.innerHTML = `Percentual de satisfação: <span>${percentual.toFixed(2)}%</span>`;
+    
+    console.log(resposta);
+    notaAcumulada += converterNota(Number(resposta));
+    console.log(notaAcumulada);
   }
+  const percentual = (notaAcumulada / notaTotal) * 100;
+  alert(`Percentual de satisfação: ${percentual.toFixed(2)}%`);
+  exibir.innerHTML = `Percentual de satisfação: <span>${percentual.toFixed(
+    2
+  )}%</span>`;
 }
 
-fazerPerguntas(perguntas);
+fazerPerguntas();

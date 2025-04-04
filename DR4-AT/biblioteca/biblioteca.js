@@ -50,7 +50,7 @@ function validarNumeroInteiroPositivo(valor) {
 
 function limitarNumeroDaEntrada(num, min = 1, max = 3) {
   if(num > max || num < min) {
-    alert("A entrada deve ser um numero entre ${min} e ${max}")
+    alert(`A entrada deve ser um numero entre ${min} e ${max}`)
     return false
   }
   return true
