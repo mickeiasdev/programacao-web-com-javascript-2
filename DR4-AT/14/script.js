@@ -16,7 +16,6 @@ function abreviarNome() {
 
   try {
     validarEntradasComThrowErro(entrada);
-
     const nomes = entrada.split(" ");
 
     if (nomes.length < 2) {
@@ -26,11 +25,8 @@ function abreviarNome() {
     const nomeLimpo = nomes.filter(
       (parte) => !preposicoes.includes(parte.toLowerCase())
     );
-
     const primeiroNome = nomeLimpo[0].charAt(0).toUpperCase() +  nomeLimpo[0].slice(1).toLowerCase();
-      
     const ultimoNome = nomeLimpo[nomeLimpo.length - 1].charAt(0).toUpperCase() + nomeLimpo[nomeLimpo.length - 1].slice(1).toLowerCase();
-
     const abreviado = nomeLimpo.slice(1, nomeLimpo.length - 1).map((parte) => (parte.charAt(0).toUpperCase() + ".")).join(" ");
 
     exibir.innerHTML = `<p>Nome abreviado: <span>${primeiroNome} ${abreviado} ${ultimoNome}</span></p>`;
