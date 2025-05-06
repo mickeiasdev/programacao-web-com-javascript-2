@@ -1,6 +1,6 @@
 # 📘 Programação Web com JavaScript II
 
-Este repositório contém o material de estudo para a disciplina **Programação Web com JavaScript II**, com foco em JavaScript, incluindo arrays, loops, funções, debugging e mais.
+Neste curso, continuaremos nosso aprendizado sobre programação com JavaScript. Aprenderemos sobre arrays, strings e loops, e conceitos como code debugging e uso avançado de funções.
 
 ---
 
